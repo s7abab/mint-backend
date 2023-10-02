@@ -17,10 +17,8 @@ const server = http.createServer(app);
 const initializeSocket = require("./socket/socketServer");
 initializeSocket(server);
 // Middlewares
-app.use(
-  "/images",
-  express.static(path.join(__dirname, "./public/images"))
-);
+
+app.use("/images", express.static(path.join(__dirname, "./public/images")));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.json());
