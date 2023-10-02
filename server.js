@@ -19,7 +19,7 @@ initializeSocket(server);
 // Middlewares
 app.use(
   "/images",
-  express.static(path.join(__dirname, "../backend/public/images"))
+  express.static(path.join(__dirname, "../mint-backend/public/images"))
 );
 app.use(express.json());
 app.use(morgan("dev"));
